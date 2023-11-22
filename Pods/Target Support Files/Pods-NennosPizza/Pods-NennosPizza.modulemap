@@ -1,0 +1,6 @@
+framework module Pods_NennosPizza {
+  umbrella header "Pods-NennosPizza-umbrella.h"
+
+  export *
+  module * { export * }
+}

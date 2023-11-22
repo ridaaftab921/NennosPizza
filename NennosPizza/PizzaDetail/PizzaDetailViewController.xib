@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PizzaDetailViewController" customModule="NennosPizza" customModuleProvider="target">
+            <connections>
+                <outlet property="addToCartBtn" destination="tjZ-yi-wko" id="fL0-Ss-WXk"/>
+                <outlet property="tableView" destination="8be-9T-Llg" id="iBl-0O-oFk"/>
+                <outlet property="view" destination="nka-0i-4WH" id="e7t-Hu-A0r"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nka-0i-4WH">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8be-9T-Llg">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="42B-kg-IHb"/>
+                        <outlet property="delegate" destination="-1" id="9i6-Vx-F2M"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjZ-yi-wko">
+                    <rect key="frame" x="0.0" y="768" width="393" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="nO0-3Y-F6S"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="ADD TO CART ">
+                        <fontDescription key="titleFontDescription" name="SFUIText-Bold" family="SF UI Text" pointSize="16"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="addToCart:" destination="-1" eventType="touchUpInside" id="MZ8-cD-xln"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="9Oo-zD-6gM"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tjZ-yi-wko" firstAttribute="leading" secondItem="9Oo-zD-6gM" secondAttribute="leading" id="965-VN-qm0"/>
+                <constraint firstItem="8be-9T-Llg" firstAttribute="top" secondItem="9Oo-zD-6gM" secondAttribute="top" id="Nak-cD-LTW"/>
+                <constraint firstItem="8be-9T-Llg" firstAttribute="leading" secondItem="9Oo-zD-6gM" secondAttribute="leading" id="QHJ-8w-2cz"/>
+                <constraint firstItem="9Oo-zD-6gM" firstAttribute="trailing" secondItem="tjZ-yi-wko" secondAttribute="trailing" id="eim-CP-5OR"/>
+                <constraint firstItem="9Oo-zD-6gM" firstAttribute="bottom" secondItem="8be-9T-Llg" secondAttribute="bottom" id="oRd-tE-cEm"/>
+                <constraint firstItem="9Oo-zD-6gM" firstAttribute="bottom" secondItem="tjZ-yi-wko" secondAttribute="bottom" id="oV1-Zo-fpC"/>
+                <constraint firstItem="9Oo-zD-6gM" firstAttribute="trailing" secondItem="8be-9T-Llg" secondAttribute="trailing" id="vIe-gU-FER"/>
+            </constraints>
+            <point key="canvasLocation" x="-752" y="-15"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
