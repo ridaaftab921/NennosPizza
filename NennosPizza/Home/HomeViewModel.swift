@@ -10,7 +10,7 @@ import Foundation
 class HomeViewModel {
     
     let dataStore: AppDataStore
-    private var pizzas: Pizzas?
+    var pizzas: Pizzas?
     private var ingredients: [Ingredient] = []
     private var pizzasViewModel: [PizzaViewModel] = []
 
@@ -23,14 +23,14 @@ class HomeViewModel {
             switch response {
             case .success(let pizzas):
                 self.pizzas = pizzas
-                self.getIngredients(completionHandler: completionHandler)
+                self.fetchIngredients(completionHandler: completionHandler)
             case .failure( _):
                 completionHandler(false)
             }
         }
     }
     
-    func getIngredients(completionHandler: @escaping ((Bool?) -> Void)) {
+    func fetchIngredients(completionHandler: @escaping ((Bool?) -> Void)) {
         dataStore.fetchIngredients { response in
             switch response {
             case .success(let ingredients):
@@ -43,7 +43,7 @@ class HomeViewModel {
         }
     }
     
-    func createPizzaViewModel() {
+    private func createPizzaViewModel() {
         if let pizzas = pizzas?.pizzas, let basePrice = self.pizzas?.basePrice {
         
             for pizza in pizzas {

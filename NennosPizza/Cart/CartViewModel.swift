@@ -43,7 +43,7 @@ class CartViewModel {
             case .success( _):
                 completionHandler(true)
             case .failure( _):
-                break
+                completionHandler(false)
             }
         }
     }

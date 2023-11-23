@@ -16,7 +16,11 @@ protocol AppDataStore {
 }
 
 class AppDataStoreImpl {
-    var networking: AlamofireNetworking = AlamofireNetworkManager()
+    var networking: AlamofireNetworking
+    
+    init(_ networking: AlamofireNetworking) {
+        self.networking = networking
+    }
 }
 
 extension AppDataStoreImpl: AppDataStore {

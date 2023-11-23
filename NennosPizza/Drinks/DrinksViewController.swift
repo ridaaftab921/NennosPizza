@@ -14,7 +14,7 @@ class DrinksViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    init(viewModel: DrinksViewModel, delegate: AddToCartDelegate?) {
+    init(viewModel: DrinksViewModel, delegate: AddToCartDelegate? = nil) {
         self.viewModel = viewModel
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)

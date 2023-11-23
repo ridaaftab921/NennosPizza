@@ -16,6 +16,19 @@
 		D3516E722B0E590D00FBA9D5 /* SFUIText-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3516E6E2B0E590D00FBA9D5 /* SFUIText-Heavy.ttf */; };
 		D3516E732B0E590D00FBA9D5 /* SFUIText-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3516E6F2B0E590D00FBA9D5 /* SFUIText-RegularItalic.ttf */; };
 		D3516E742B0E590D00FBA9D5 /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3516E702B0E590D00FBA9D5 /* SFUIText-Regular.ttf */; };
+		D35903B92B0ED1F3007E2C44 /* MockAppStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903B82B0ED1F3007E2C44 /* MockAppStoreImpl.swift */; };
+		D35903BB2B0ED62A007E2C44 /* PizzasStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903BA2B0ED62A007E2C44 /* PizzasStub.swift */; };
+		D35903BD2B0EDA21007E2C44 /* MockNetworkingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903BC2B0EDA21007E2C44 /* MockNetworkingObject.swift */; };
+		D35903C02B0EE127007E2C44 /* DataStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903BF2B0EE127007E2C44 /* DataStoreFactory.swift */; };
+		D35903C22B0EF055007E2C44 /* DataResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903C12B0EF055007E2C44 /* DataResponseModel.swift */; };
+		D35903C72B0F8E8B007E2C44 /* CartViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903C62B0F8E8B007E2C44 /* CartViewModelTests.swift */; };
+		D35903C92B0F914E007E2C44 /* DrinksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903C82B0F914E007E2C44 /* DrinksViewModelTests.swift */; };
+		D35903CB2B0F9395007E2C44 /* PizzaDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903CA2B0F9395007E2C44 /* PizzaDetailViewModelTests.swift */; };
+		D35903CE2B0F9858007E2C44 /* TestAppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903CD2B0F9858007E2C44 /* TestAppDataStore.swift */; };
+		D35903D02B0FA0F1007E2C44 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903CF2B0FA0F1007E2C44 /* HomeViewControllerTests.swift */; };
+		D35903D22B0FA9E8007E2C44 /* CartViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903D12B0FA9E8007E2C44 /* CartViewControllerTests.swift */; };
+		D35903D42B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903D32B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift */; };
+		D35903D62B0FB3E6007E2C44 /* DrinksViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903D52B0FB3E6007E2C44 /* DrinksViewControllerTests.swift */; };
 		D3806D4C2B0C515900A0837C /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3806D4B2B0C515900A0837C /* Cart.swift */; };
 		D3806D4E2B0C5A6B00A0837C /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3806D4D2B0C5A6B00A0837C /* CartViewController.xib */; };
 		D3806D512B0C5AAA00A0837C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3806D502B0C5AAA00A0837C /* CartViewController.swift */; };
@@ -43,6 +56,7 @@
 		D3ECB9F22B0D4F6100E90175 /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3ECB9F12B0D4F6100E90175 /* DrinksViewController.xib */; };
 		D3ECB9F42B0D4F6C00E90175 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECB9F32B0D4F6C00E90175 /* DrinksViewController.swift */; };
 		D3ECB9F62B0D71BD00E90175 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ECB9F52B0D71BD00E90175 /* CartViewModel.swift */; };
+		D3F3D23F2B0EA779001CFD6E /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F3D23E2B0EA779001CFD6E /* HomeViewModelTests.swift */; };
 		DEB5CDDE87413C5B9FB073CE /* Pods_NennosPizza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E282F820E2A75A47B5966F /* Pods_NennosPizza.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +83,19 @@
 		D3516E6E2B0E590D00FBA9D5 /* SFUIText-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Heavy.ttf"; sourceTree = "<group>"; };
 		D3516E6F2B0E590D00FBA9D5 /* SFUIText-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-RegularItalic.ttf"; sourceTree = "<group>"; };
 		D3516E702B0E590D00FBA9D5 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFUIText-Regular.ttf"; sourceTree = "<group>"; };
+		D35903B82B0ED1F3007E2C44 /* MockAppStoreImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppStoreImpl.swift; sourceTree = "<group>"; };
+		D35903BA2B0ED62A007E2C44 /* PizzasStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasStub.swift; sourceTree = "<group>"; };
+		D35903BC2B0EDA21007E2C44 /* MockNetworkingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingObject.swift; sourceTree = "<group>"; };
+		D35903BF2B0EE127007E2C44 /* DataStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreFactory.swift; sourceTree = "<group>"; };
+		D35903C12B0EF055007E2C44 /* DataResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataResponseModel.swift; sourceTree = "<group>"; };
+		D35903C62B0F8E8B007E2C44 /* CartViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModelTests.swift; sourceTree = "<group>"; };
+		D35903C82B0F914E007E2C44 /* DrinksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewModelTests.swift; sourceTree = "<group>"; };
+		D35903CA2B0F9395007E2C44 /* PizzaDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailViewModelTests.swift; sourceTree = "<group>"; };
+		D35903CD2B0F9858007E2C44 /* TestAppDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppDataStore.swift; sourceTree = "<group>"; };
+		D35903CF2B0FA0F1007E2C44 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
+		D35903D12B0FA9E8007E2C44 /* CartViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerTests.swift; sourceTree = "<group>"; };
+		D35903D32B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		D35903D52B0FB3E6007E2C44 /* DrinksViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewControllerTests.swift; sourceTree = "<group>"; };
 		D3806D4B2B0C515900A0837C /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		D3806D4D2B0C5A6B00A0837C /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		D3806D502B0C5AAA00A0837C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +126,7 @@
 		D3ECB9F12B0D4F6100E90175 /* DrinksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
 		D3ECB9F32B0D4F6C00E90175 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		D3ECB9F52B0D71BD00E90175 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		D3F3D23E2B0EA779001CFD6E /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +194,46 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		D35903BE2B0EE112007E2C44 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D35903BF2B0EE127007E2C44 /* DataStoreFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		D35903C32B0F8B8B007E2C44 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D35903BA2B0ED62A007E2C44 /* PizzasStub.swift */,
+				D35903B82B0ED1F3007E2C44 /* MockAppStoreImpl.swift */,
+				D35903BC2B0EDA21007E2C44 /* MockNetworkingObject.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		D35903CC2B0F949C007E2C44 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D3F3D23E2B0EA779001CFD6E /* HomeViewModelTests.swift */,
+				D35903C62B0F8E8B007E2C44 /* CartViewModelTests.swift */,
+				D35903C82B0F914E007E2C44 /* DrinksViewModelTests.swift */,
+				D35903CA2B0F9395007E2C44 /* PizzaDetailViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		D35903D72B0FB4E3007E2C44 /* ViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D35903CF2B0FA0F1007E2C44 /* HomeViewControllerTests.swift */,
+				D35903D12B0FA9E8007E2C44 /* CartViewControllerTests.swift */,
+				D35903D32B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift */,
+				D35903D52B0FB3E6007E2C44 /* DrinksViewControllerTests.swift */,
+			);
+			path = ViewControllerTests;
+			sourceTree = "<group>";
+		};
 		D3806D4F2B0C5A9400A0837C /* Cart */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +267,7 @@
 		D387FA0C2B0858C300EC54BC /* NennosPizza */ = {
 			isa = PBXGroup;
 			children = (
+				D35903BE2B0EE112007E2C44 /* Factory */,
 				D3516E6C2B0E58F700FBA9D5 /* Font */,
 				D387FA0D2B0858C300EC54BC /* AppDelegate.swift */,
 				D387FA0F2B0858C300EC54BC /* SceneDelegate.swift */,
@@ -234,6 +303,7 @@
 			children = (
 				D3951EB22B0AF3D000EA2BBA /* AlamofireNetworking.swift */,
 				D3048FB72B0B098200754D09 /* DataStore.swift */,
+				D35903C12B0EF055007E2C44 /* DataResponseModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,7 +311,11 @@
 		D3A0F0802B0E7FD700750570 /* NennosPizzaTests */ = {
 			isa = PBXGroup;
 			children = (
+				D35903C32B0F8B8B007E2C44 /* Mocks */,
+				D35903CC2B0F949C007E2C44 /* ViewModelTests */,
+				D35903D72B0FB4E3007E2C44 /* ViewControllerTests */,
 				D3A0F0812B0E7FD700750570 /* NennosPizzaTests.swift */,
+				D35903CD2B0F9858007E2C44 /* TestAppDataStore.swift */,
 			);
 			path = NennosPizzaTests;
 			sourceTree = "<group>";
@@ -463,12 +537,14 @@
 				D387FA0E2B0858C300EC54BC /* AppDelegate.swift in Sources */,
 				D3516E6B2B0E43B200FBA9D5 /* ThankYouViewController.swift in Sources */,
 				D3516E662B0E435000FBA9D5 /* DrinksViewModel.swift in Sources */,
+				D35903C22B0EF055007E2C44 /* DataResponseModel.swift in Sources */,
 				D3951EB32B0AF3D000EA2BBA /* AlamofireNetworking.swift in Sources */,
 				D387FA262B0859CF00EC54BC /* Pizza.swift in Sources */,
 				D3C02BA02B0C16430010FC0D /* PizzaDetailViewModel.swift in Sources */,
 				D3C02BA22B0C1D020010FC0D /* ItemCell.swift in Sources */,
 				D387FA282B0859D800EC54BC /* Drink.swift in Sources */,
 				D3ECB9EF2B0D3A6900E90175 /* AppCoordinator.swift in Sources */,
+				D35903C02B0EE127007E2C44 /* DataStoreFactory.swift in Sources */,
 				D3ACD1422B0E7E280001E55C /* Order.swift in Sources */,
 				D387FA102B0858C300EC54BC /* SceneDelegate.swift in Sources */,
 				D387FA2A2B085D6900EC54BC /* HomeViewModel.swift in Sources */,
@@ -481,6 +557,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A0F0822B0E7FD700750570 /* NennosPizzaTests.swift in Sources */,
+				D35903D22B0FA9E8007E2C44 /* CartViewControllerTests.swift in Sources */,
+				D35903BD2B0EDA21007E2C44 /* MockNetworkingObject.swift in Sources */,
+				D35903D62B0FB3E6007E2C44 /* DrinksViewControllerTests.swift in Sources */,
+				D35903CE2B0F9858007E2C44 /* TestAppDataStore.swift in Sources */,
+				D35903CB2B0F9395007E2C44 /* PizzaDetailViewModelTests.swift in Sources */,
+				D3F3D23F2B0EA779001CFD6E /* HomeViewModelTests.swift in Sources */,
+				D35903D42B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift in Sources */,
+				D35903D02B0FA0F1007E2C44 /* HomeViewControllerTests.swift in Sources */,
+				D35903BB2B0ED62A007E2C44 /* PizzasStub.swift in Sources */,
+				D35903C92B0F914E007E2C44 /* DrinksViewModelTests.swift in Sources */,
+				D35903C72B0F8E8B007E2C44 /* CartViewModelTests.swift in Sources */,
+				D35903B92B0ED1F3007E2C44 /* MockAppStoreImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

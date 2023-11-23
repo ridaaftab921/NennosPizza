@@ -18,7 +18,7 @@ class AppCoordinator {
     init(navigationController: UINavigationController, window: UIWindow?) {
         self.navigationController = navigationController
         self.window = window
-        appDataStore = AppDataStoreImpl()
+        appDataStore = DataStoreFactory.appDataStore()
         self.setNavigationBarAppearance()
     }
     
@@ -50,10 +50,8 @@ class AppCoordinator {
 extension AppCoordinator: HomeViewControllerDelegate {
     
     func showPizzaDetail(pizza: PizzaViewModel, ingrediants: [Ingredient]) {
-        let pizzaDetailViewController = PizzaDetailViewController()
         let viewModel = PizzaDetailViewModel(pizzaModel: pizza, ingredients: ingrediants)
-        pizzaDetailViewController.viewModel = viewModel
-        pizzaDetailViewController.delegate = self
+        let pizzaDetailViewController = PizzaDetailViewController(viewModel: viewModel, delegate: self)
         self.navigationController.pushViewController(pizzaDetailViewController, animated: true)
     }
     func showCartScreen() {

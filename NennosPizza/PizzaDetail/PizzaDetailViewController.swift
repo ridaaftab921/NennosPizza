@@ -13,12 +13,14 @@ protocol AddToCartDelegate: AnyObject {
     func addDrinkToCart(drink: Drink)
 }
 class PizzaDetailViewController: UIViewController {
-    var viewModel: PizzaDetailViewModel?
+    var viewModel: PizzaDetailViewModel
     weak var delegate: AddToCartDelegate?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addToCartBtn: UIButton!
     
-    init() {
+    init(viewModel: PizzaDetailViewModel, delegate: AddToCartDelegate? = nil) {
+        self.viewModel = viewModel
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,15 +34,13 @@ class PizzaDetailViewController: UIViewController {
     }
     
     func setupUI() {
-        self.title = viewModel?.pizzaModel.getName().uppercased()
-        addToCartBtn.setTitle(String(format: "ADD TO CART(%@)", viewModel?.pizzaModel.getPrice() ?? ""), for: .normal)
+        self.title = viewModel.pizzaModel.getName().uppercased()
+        addToCartBtn.setTitle(String(format: "ADD TO CART(%@)", viewModel.pizzaModel.getPrice()), for: .normal)
         tableView.register(UINib(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "ItemCell")
         tableView.reloadData()
     }
     @IBAction func addToCart(_ sender: Any) {
-        if let pizza = self.viewModel?.pizzaModel {
-            delegate?.addPizzaToCart(pizza: pizza)
-        }
+        delegate?.addPizzaToCart(pizza: self.viewModel.pizzaModel)
     }
     
 }
@@ -48,16 +48,17 @@ class PizzaDetailViewController: UIViewController {
 extension PizzaDetailViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.getIngredientsCount() ?? 0
+        return self.viewModel.getIngredientsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as? ItemCell
         
-        if let ingredient = self.viewModel?.ingredients[indexPath.row], let showTick = self.viewModel?.isIngredientIncluded(index: indexPath.row) {
-            cell?.configureForIngredient(ingredient: ingredient, showTick: showTick)
-
-        }
+        let ingredient = self.viewModel.ingredients[indexPath.row]
+        let showTick = self.viewModel.isIngredientIncluded(index: indexPath.row)
+        cell?.configureForIngredient(ingredient: ingredient, showTick: showTick)
+        
+        
         return cell ?? UITableViewCell()
     }
     
@@ -78,7 +79,7 @@ extension PizzaDetailViewController: UITableViewDelegate, UITableViewDataSource 
             view.backgroundColor = UIColor(patternImage: backgroundImage)
         }
 
-        if let url = URL(string: viewModel?.pizzaModel.getImageUrl() ?? "") {
+        if let url = URL(string: viewModel.pizzaModel.getImageUrl()) {
             var pizzaImageView : UIImageView!
         
             pizzaImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 270))
@@ -97,11 +98,5 @@ extension PizzaDetailViewController: UITableViewDelegate, UITableViewDataSource 
         stackView.addArrangedSubview(view)
         stackView.addArrangedSubview(titleLabel)
         return stackView
-    }
-}
-
-extension PizzaDetailViewController {
-    static func instanceFromStoryboard () -> UIViewController {
-        return UIStoryboard(name: "PizzaDetail", bundle: Bundle.main).instantiateViewController(identifier: "PizzaDetailViewController")
     }
 }
