@@ -29,6 +29,7 @@
 		D35903D22B0FA9E8007E2C44 /* CartViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903D12B0FA9E8007E2C44 /* CartViewControllerTests.swift */; };
 		D35903D42B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903D32B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift */; };
 		D35903D62B0FB3E6007E2C44 /* DrinksViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903D52B0FB3E6007E2C44 /* DrinksViewControllerTests.swift */; };
+		D35903DD2B0FBFBB007E2C44 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35903DC2B0FBFBB007E2C44 /* UIColor+Extension.swift */; };
 		D3806D4C2B0C515900A0837C /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3806D4B2B0C515900A0837C /* Cart.swift */; };
 		D3806D4E2B0C5A6B00A0837C /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3806D4D2B0C5A6B00A0837C /* CartViewController.xib */; };
 		D3806D512B0C5AAA00A0837C /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3806D502B0C5AAA00A0837C /* CartViewController.swift */; };
@@ -96,6 +97,7 @@
 		D35903D12B0FA9E8007E2C44 /* CartViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewControllerTests.swift; sourceTree = "<group>"; };
 		D35903D32B0FADE6007E2C44 /* PizzaDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		D35903D52B0FB3E6007E2C44 /* DrinksViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewControllerTests.swift; sourceTree = "<group>"; };
+		D35903DC2B0FBFBB007E2C44 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		D3806D4B2B0C515900A0837C /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		D3806D4D2B0C5A6B00A0837C /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		D3806D502B0C5AAA00A0837C /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				D3516E622B0DA6FB00FBA9D5 /* UIViewController+Extension.swift */,
 				D3ACD13E2B0E5B8D0001E55C /* UIFont+Extension.swift */,
+				D35903DC2B0FBFBB007E2C44 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				D3806D4C2B0C515900A0837C /* Cart.swift in Sources */,
 				D3048FB82B0B098200754D09 /* DataStore.swift in Sources */,
 				D3ECB9F62B0D71BD00E90175 /* CartViewModel.swift in Sources */,
+				D35903DD2B0FBFBB007E2C44 /* UIColor+Extension.swift in Sources */,
 				D387FA0E2B0858C300EC54BC /* AppDelegate.swift in Sources */,
 				D3516E6B2B0E43B200FBA9D5 /* ThankYouViewController.swift in Sources */,
 				D3516E662B0E435000FBA9D5 /* DrinksViewModel.swift in Sources */,

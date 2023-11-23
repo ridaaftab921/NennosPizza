@@ -13,7 +13,6 @@ class Cart {
     private var drinks: [Drink] = []
  
     init() {
-//        retrieveItems()
     }
     
     func getPizzasCount() -> Int {
@@ -47,19 +46,6 @@ class Cart {
     func removeDrink(atIndex index: Int)  {
         drinks.remove(at: index)
     }
-    
-//    private func persistItems() {
-//        removePersistedItems()
-//        UserDefaults.standard[.cartItems] = items
-//    }
-//
-//    private func retrieveItems() {
-//        items = UserDefaults.standard[.cartItems] ?? []
-//    }
-//
-//    private func removePersistedItems() {
-//        UserDefaults.standard[.cartItems]?.removeAll()
-//    }
 }
 extension Cart {
     func add(pizza: PizzaViewModel) {

@@ -60,17 +60,6 @@ extension AppCoordinator: HomeViewControllerDelegate {
         cartVC.delegate = self
         self.navigationController.pushViewController(cartVC, animated: true)
     }
-//
-//    func fetchDrinks() {
-//        self.appDataStore.fetchPizzas { response in
-//            switch response {
-//            case .success(let pizzas):
-//                break
-//            case .failure( _):
-//                break
-//            }
-//        }
-//    }
 }
 
 extension AppCoordinator: AddToCartDelegate {
