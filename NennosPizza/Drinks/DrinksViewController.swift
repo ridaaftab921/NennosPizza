@@ -8,12 +8,14 @@
 import UIKit
 
 class DrinksViewController: UIViewController {
-    
+    // MARK: - Properties
     var viewModel: DrinksViewModel
     weak var delegate: AddToCartDelegate?
-
+    
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Init
     init(viewModel: DrinksViewModel, delegate: AddToCartDelegate? = nil) {
         self.viewModel = viewModel
         self.delegate = delegate

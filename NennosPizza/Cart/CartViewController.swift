@@ -14,13 +14,16 @@ protocol CartViewControllerDelegate: AnyObject {
     func showThankYouScreen()
 }
 class CartViewController: UIViewController {
+    // MARK: - Properties
     var viewModel: CartViewModel
     weak var delegate: CartViewControllerDelegate?
     
+    // MARK: Outlets
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var emptyCartLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Init
     init(viewModel: CartViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -39,6 +42,10 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        updateUI()
+    }
+    
+    func updateUI() {
         emptyCartLabel.isHidden = !(viewModel.isCartEmpty())
         checkoutButton.isHidden = viewModel.isCartEmpty()
         tableView.reloadData()
@@ -93,8 +100,16 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             cell?.configureCartItem(withPizza: self.viewModel.getPizza(atIndex: indexPath.row))
+            cell?.removeItemAction = {
+                self.viewModel.removerPizza(atIndex: indexPath.row)
+                self.updateUI()
+            }
         case 1:
             cell?.configureCartItem(withDrink: self.viewModel.getDrink(atIndex: indexPath.row))
+            cell?.removeItemAction = {
+                self.viewModel.removerDrink(atIndex: indexPath.row)
+                self.updateUI()
+            }
         default:
             break
         }

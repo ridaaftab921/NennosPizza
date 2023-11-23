@@ -37,6 +37,14 @@ class CartViewModel {
         return cart.getDrink(atIndex: index)
     }
     
+    func removerPizza(atIndex index: Int) {
+        cart.removePizza(atIndex: index)
+    }
+    
+    func removerDrink(atIndex index: Int) {
+        cart.removeDrink(atIndex: index)
+    }
+    
     func createOrder(completionHandler: @escaping ((Bool?) -> Void)) {
         dataStore.createOrder(cart: cart){ response in
             switch response {

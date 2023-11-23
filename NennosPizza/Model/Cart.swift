@@ -39,6 +39,15 @@ class Cart {
     func getDrinkIds() -> [Int] {
         return drinks.map { $0.id }
     }
+    
+    func removePizza(atIndex index: Int) {
+        pizzas.remove(at: index)
+    }
+    
+    func removeDrink(atIndex index: Int)  {
+        drinks.remove(at: index)
+    }
+    
 //    private func persistItems() {
 //        removePersistedItems()
 //        UserDefaults.standard[.cartItems] = items

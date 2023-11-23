@@ -14,8 +14,14 @@ class ItemCell: UITableViewCell {
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    var removeItemAction: (() -> Void)?
+
     
-    
+    @IBAction func actionButtonTapped(_ sender: Any) {
+        if let action = removeItemAction {
+            action()
+        }
+    }
     func configureForIngredient(ingredient: Ingredient, showTick: Bool) {
         nameLabel.text = ingredient.name
         priceLabel.text = String(format: "$%0.0f", ingredient.price)

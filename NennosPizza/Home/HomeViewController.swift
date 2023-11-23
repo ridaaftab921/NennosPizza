@@ -14,11 +14,14 @@ protocol HomeViewControllerDelegate: AnyObject {
 }
 
 class HomeViewController: UIViewController {
+    // MARK: - Properties
     let viewModel: HomeViewModel
     weak var delegate: HomeViewControllerDelegate?
-
+    
+    // MARK: Outlets
     @IBOutlet weak var pizzasTableView: UITableView!
 
+    // MARK: Init
     init(viewModel: HomeViewModel, delegate: HomeViewControllerDelegate? = nil) {
         self.viewModel = viewModel
         self.delegate = delegate

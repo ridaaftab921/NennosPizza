@@ -13,11 +13,15 @@ protocol AddToCartDelegate: AnyObject {
     func addDrinkToCart(drink: Drink)
 }
 class PizzaDetailViewController: UIViewController {
+    // MARK: Properties
     var viewModel: PizzaDetailViewModel
     weak var delegate: AddToCartDelegate?
+    
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addToCartBtn: UIButton!
     
+    // MARK: Init
     init(viewModel: PizzaDetailViewModel, delegate: AddToCartDelegate? = nil) {
         self.viewModel = viewModel
         self.delegate = delegate
